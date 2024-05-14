@@ -3,11 +3,11 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use app\Models\Billing;
-Use app\Models\Guest;
-use app\Models\Reservation;
-use app\Models\Review;
-use app\Models\Room;
+use App\Models\Billing;
+Use App\Models\Guest;
+use App\Models\Reservation;
+use App\Models\Review;
+use App\Models\Room;
 
 
 class DatabaseSeeder extends Seeder
