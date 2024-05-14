@@ -19,12 +19,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Billing::insert([
-            ['BillID' => 123456, 'ReservationID' => 111, 'TotalAmount' => 1000000, 'PaymentStatus' => 'Paid', 'CreditCardNumber' => 1234],
-            ['BillID' => 123457, 'ReservationID' => 222, 'TotalAmount' => 1000000, 'PaymentStatus' => 'Paid', 'CreditCardNumber' => 5689],
-            ['BillID' => 123458, 'ReservationID' => 333, 'TotalAmount' => 4000000, 'PaymentStatus' => 'Paid', 'CreditCardNumber' => 1357],
-            ['BillID' => 123459, 'ReservationID' => 444, 'TotalAmount' => 2000000, 'PaymentStatus' => 'Paid', 'CreditCardNumber' => 2468],
-            ['BillID' => 123460, 'ReservationID' => 555, 'TotalAmount' => 6000000, 'PaymentStatus' => 'Paid', 'CreditCardNumber' => 1987],
+        Room::insert([
+            ['RoomID' => 100, 'RoomNumber' => 1, 'RoomType' => 'Standard Room', 'Rate' => 1000000, 'Availability' => 'Occupied', 'Insurance' => 305],
+            ['RoomID' => 101, 'RoomNumber' => 2, 'RoomType' => 'Standard Room', 'Rate' => 1000000, 'Availability' => 'Occupied', 'Insurance' => 306],
+            ['RoomID' => 200, 'RoomNumber' => 3, 'RoomType' => 'Superior Room', 'Rate' => 2000000, 'Availability' => 'Empty', 'Insurance' => 307],
+            ['RoomID' => 201, 'RoomNumber' => 4, 'RoomType' => 'Superior Room', 'Rate' => 2000000, 'Availability' => 'Maintenance', 'Insurance' => 308],
+            ['RoomID' => 300, 'RoomNumber' => 5, 'RoomType' => 'Kings Room', 'Rate' => 3000000, 'Availability' => 'Occupied', 'Insurance' => 309],
         ]);
 
         Guest::insert([
@@ -50,13 +50,15 @@ class DatabaseSeeder extends Seeder
             ['ReviewID' => 4, 'ReservationID' => 444, 'Rating' => '4', 'Comment' => 'Staf yang ramah dan fasilitas yang bagus.', 'InputDate' => '2024-11-02', 'TravelType' => 'Holiday'],
             ['ReviewID' => 5, 'ReservationID' => 555, 'Rating' => '3', 'Comment' => 'Pengalaman menginap yang lumayan, tapi Wi-Fi tidak stabil.', 'InputDate' => '2024-11-04', 'TravelType' => 'Business'],
         ]);
-
-        Room::insert([
-            ['RoomID' => 100, 'RoomNumber' => 1, 'RoomType' => 'Standard Room', 'Rate' => 1000000, 'Availability' => 'Occupied', 'Insurance' => 305],
-            ['RoomID' => 101, 'RoomNumber' => 2, 'RoomType' => 'Standard Room', 'Rate' => 1000000, 'Availability' => 'Occupied', 'Insurance' => 306],
-            ['RoomID' => 200, 'RoomNumber' => 3, 'RoomType' => 'Superior Room', 'Rate' => 2000000, 'Availability' => 'Empty', 'Insurance' => 307],
-            ['RoomID' => 201, 'RoomNumber' => 4, 'RoomType' => 'Superior Room', 'Rate' => 2000000, 'Availability' => 'Maintenance', 'Insurance' => 308],
-            ['RoomID' => 300, 'RoomNumber' => 5, 'RoomType' => 'Kings Room', 'Rate' => 3000000, 'Availability' => 'Occupied', 'Insurance' => 309],
+        
+        Billing::insert([
+            ['BillID' => 123456, 'ReservationID' => 111, 'TotalAmount' => 1000000, 'PaymentStatus' => 'Paid', 'CreditCardNumber' => 1234],
+            ['BillID' => 123457, 'ReservationID' => 222, 'TotalAmount' => 1000000, 'PaymentStatus' => 'Paid', 'CreditCardNumber' => 5689],
+            ['BillID' => 123458, 'ReservationID' => 333, 'TotalAmount' => 4000000, 'PaymentStatus' => 'Paid', 'CreditCardNumber' => 1357],
+            ['BillID' => 123459, 'ReservationID' => 444, 'TotalAmount' => 2000000, 'PaymentStatus' => 'Paid', 'CreditCardNumber' => 2468],
+            ['BillID' => 123460, 'ReservationID' => 555, 'TotalAmount' => 6000000, 'PaymentStatus' => 'Paid', 'CreditCardNumber' => 1987],
         ]);
+
+
     }
 }
