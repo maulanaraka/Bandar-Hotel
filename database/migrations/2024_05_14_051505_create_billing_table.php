@@ -20,7 +20,9 @@ class CreateBillingTable extends Migration
             $table->string('PaymentStatus', 50);
             $table->integer('CreditCardNumber');
             $table->timestamps();
+        });
 
+        Schema::table('billing', function (Blueprint $table) {
             $table->foreign('ReservationID')->references('ReservationID')->on('reservation')->onDelete('restrict')->onUpdate('restrict');
         });
     }
