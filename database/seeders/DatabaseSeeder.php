@@ -7,7 +7,7 @@ use app\Models\Billing;
 Use app\Models\Guest;
 use app\Models\Reservation;
 use app\Models\Review;
-use App\Models\Room;
+use app\Models\Room;
 
 
 class DatabaseSeeder extends Seeder
