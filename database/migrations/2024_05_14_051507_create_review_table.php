@@ -10,11 +10,14 @@ class CreateReviewTable extends Migration
     {
         Schema::create('review', function (Blueprint $table) {
             $table->increments('ReviewID');
-            $table->integer('GuestID')->unsigned();
-            $table->text('Review');
+            $table->unsignedBigInteger('ReservationID');
+            $table->int('Rating');
+            $table->text('Comment');
+            $table->date('InputDate');
+            $table->string('TravelType');
             $table->timestamps();
 
-            $table->foreign('GuestID')->references('GuestID')->on('guest')->onDelete('restrict')->onUpdate('restrict');
+            $table->foreign('ReservationID')->references('ReservationID')->on('reservation')->onDelete('restrict')->onUpdate('restrict');
         });
     }
 

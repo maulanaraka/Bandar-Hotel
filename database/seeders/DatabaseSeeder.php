@@ -44,19 +44,19 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Review::insert([
-            ['ReviewID' => 1, 'ReservationID' => 111, 'Rating' => '5', 'Comment' => 'Pelayanan yang sangat baik dan kamar nyaman.', 'InputDate' => '2024-11-28', 'TravelType' => 'Business'],
-            ['ReviewID' => 2, 'ReservationID' => 222, 'Rating' => '4', 'Comment' => 'Lokasi bagus, tapi kebersihan bisa ditingkatkan.', 'InputDate' => '2024-11-01', 'TravelType' => 'Others'],
-            ['ReviewID' => 3, 'ReservationID' => 333, 'Rating' => '5', 'Comment' => 'Saya benar-benar menyukai penginapanku! Semuanya sempurna.', 'InputDate' => '2024-11-03', 'TravelType' => 'Education'],
-            ['ReviewID' => 4, 'ReservationID' => 444, 'Rating' => '4', 'Comment' => 'Staf yang ramah dan fasilitas yang bagus.', 'InputDate' => '2024-11-02', 'TravelType' => 'Holiday'],
-            ['ReviewID' => 5, 'ReservationID' => 555, 'Rating' => '3', 'Comment' => 'Pengalaman menginap yang lumayan, tapi Wi-Fi tidak stabil.', 'InputDate' => '2024-11-04', 'TravelType' => 'Business'],
+            ['ReservationID' => 1, 'Rating' => 5, 'Comment' => 'Pelayanan yang sangat baik dan kamar nyaman.', 'InputDate' => '2024-11-28', 'TravelType' => 'Business'],
+            ['ReservationID' => 2, 'Rating' => 4, 'Comment' => 'Lokasi bagus, tapi kebersihan bisa ditingkatkan.', 'InputDate' => '2024-11-01', 'TravelType' => 'Others'],
+            ['ReservationID' => 3, 'Rating' => 5, 'Comment' => 'Saya benar-benar menyukai penginapanku! Semuanya sempurna.', 'InputDate' => '2024-11-03', 'TravelType' => 'Education'],
+            ['ReservationID' => 4, 'Rating' => 4, 'Comment' => 'Staf yang ramah dan fasilitas yang bagus.', 'InputDate' => '2024-11-02', 'TravelType' => 'Holiday'],
+            ['ReservationID' => 5, 'Rating' => 3, 'Comment' => 'Pengalaman menginap yang lumayan, tapi Wi-Fi tidak stabil.', 'InputDate' => '2024-11-04', 'TravelType' => 'Business'],
         ]);
         
         Billing::insert([
-            ['BillID' => 123456, 'ReservationID' => 111, 'TotalAmount' => 1000000, 'PaymentStatus' => 'Paid', 'CreditCardNumber' => 1234],
-            ['BillID' => 123457, 'ReservationID' => 222, 'TotalAmount' => 1000000, 'PaymentStatus' => 'Paid', 'CreditCardNumber' => 5689],
-            ['BillID' => 123458, 'ReservationID' => 333, 'TotalAmount' => 4000000, 'PaymentStatus' => 'Paid', 'CreditCardNumber' => 1357],
-            ['BillID' => 123459, 'ReservationID' => 444, 'TotalAmount' => 2000000, 'PaymentStatus' => 'Paid', 'CreditCardNumber' => 2468],
-            ['BillID' => 123460, 'ReservationID' => 555, 'TotalAmount' => 6000000, 'PaymentStatus' => 'Paid', 'CreditCardNumber' => 1987],
+            ['ReservationID' => 1, 'TotalAmount' => 1000000, 'PaymentStatus' => 'Paid', 'CreditCardNumber' => 1234],
+            ['ReservationID' => 2, 'TotalAmount' => 1000000, 'PaymentStatus' => 'Paid', 'CreditCardNumber' => 5689],
+            ['ReservationID' => 3, 'TotalAmount' => 4000000, 'PaymentStatus' => 'Paid', 'CreditCardNumber' => 1357],
+            ['ReservationID' => 4, 'TotalAmount' => 2000000, 'PaymentStatus' => 'Paid', 'CreditCardNumber' => 2468],
+            ['ReservationID' => 5, 'TotalAmount' => 6000000, 'PaymentStatus' => 'Paid', 'CreditCardNumber' => 1987],
         ]);
 
 

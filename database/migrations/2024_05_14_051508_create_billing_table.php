@@ -15,9 +15,9 @@ class CreateBillingTable extends Migration
     {
         Schema::create('billing', function (Blueprint $table) {
             $table->increments('BillID');
-            $table->integer('ReservationID')->unsigned();
-            $table->integer('TotalAmount');
-            $table->string('PaymentStatus', 50);
+            $table->unsignedBigInteger('ReservationID');
+            $table->double('TotalAmount');
+            $table->string('PaymentStatus', 8);
             $table->integer('CreditCardNumber');
             $table->timestamps();
 
