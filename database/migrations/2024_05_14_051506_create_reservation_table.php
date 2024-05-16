@@ -10,13 +10,15 @@ class CreateReservationTable extends Migration
     {
         Schema::create('reservation', function (Blueprint $table) {
             $table->increments('ReservationID');
-            $table->integer('GuestID')->unsigned();
-            $table->integer('RoomID')->unsigned();
+            $table->unsignedBigInteger('NIKID');
+            $table->unsignedBigInteger('RoomID');
             $table->date('CheckInDate');
             $table->date('CheckOutDate');
+            $table->double('TotalAmount');
+            $table->string('idPenyewaanMobil');
             $table->timestamps();
 
-            $table->foreign('GuestID')->references('GuestID')->on('guest')->onDelete('restrict')->onUpdate('restrict');
+            $table->foreign('NIKID')->references('NIKID')->on('guest')->onDelete('restrict')->onUpdate('restrict');
             $table->foreign('RoomID')->references('RoomID')->on('rooms')->onDelete('restrict')->onUpdate('restrict');
         });
     }

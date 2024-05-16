@@ -20,27 +20,27 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         Room::insert([
-            ['RoomID' => 100, 'RoomNumber' => 1, 'RoomType' => 'Standard Room', 'Rate' => 1000000, 'Availability' => 'Occupied', 'Insurance' => 305],
-            ['RoomID' => 101, 'RoomNumber' => 2, 'RoomType' => 'Standard Room', 'Rate' => 1000000, 'Availability' => 'Occupied', 'Insurance' => 306],
-            ['RoomID' => 200, 'RoomNumber' => 3, 'RoomType' => 'Superior Room', 'Rate' => 2000000, 'Availability' => 'Empty', 'Insurance' => 307],
-            ['RoomID' => 201, 'RoomNumber' => 4, 'RoomType' => 'Superior Room', 'Rate' => 2000000, 'Availability' => 'Maintenance', 'Insurance' => 308],
-            ['RoomID' => 300, 'RoomNumber' => 5, 'RoomType' => 'Kings Room', 'Rate' => 3000000, 'Availability' => 'Occupied', 'Insurance' => 309],
+            ['RoomNumber' => '100', 'RoomType' => 'Standard Room', 'Rate' => 1000000, 'Availability' => 'Occupied', 'Insurance' => '305'],
+            ['RoomNumber' => '101', 'RoomType' => 'Standard Room', 'Rate' => 1000000, 'Availability' => 'Occupied', 'Insurance' => '306'],
+            ['RoomNumber' => '200', 'RoomType' => 'Superior Room', 'Rate' => 2000000, 'Availability' => 'Empty', 'Insurance' => '307'],
+            ['RoomNumber' => '201', 'RoomType' => 'Superior Room', 'Rate' => 2000000, 'Availability' => 'Maintenance', 'Insurance' => '308'],
+            ['RoomNumber' => '300', 'RoomType' => 'Kings Room', 'Rate' => 3000000, 'Availability' => 'Occupied', 'Insurance' => '309'],
         ]);
 
         Guest::insert([
-            ['NIKID' => 101, 'Name' => 'Ale', 'Email' => 'aleale@gmail.com', 'Phone' => '08123456789', 'Address' => 'Suite 839 Jl. Hayamwuruk No. 89, Berau, KU 39222', 'CreditCardNumber' => 1234],
-            ['NIKID' => 102, 'Name' => 'Leo', 'Email' => 'leoamalia@yahoo.co.id', 'Phone' => '08789012345', 'Address' => 'Jl. MH. Thamrin No. 24, Sumbawa, KB 22844', 'CreditCardNumber' => 5689],
-            ['NIKID' => 103, 'Name' => 'Lea', 'Email' => 'leavilia.jet@gmail.com', 'Phone' => '08134567890', 'Address' => 'Jl. Gajahmada No. 50, Jambi, SG 40689', 'CreditCardNumber' => 1357],
-            ['NIKID' => 104, 'Name' => 'Satoru', 'Email' => 'satorusatria@gmail.com', 'Phone' => '08778901234', 'Address' => 'Jl. Hayamwuruk No. 30, Bitung, SL 21490', 'CreditCardNumber' => 2468],
-            ['NIKID' => 105, 'Name' => 'Suguru', 'Email' => 'suguruarianto@student.telkomuniversity.ac.id', 'Phone' => '08156789012', 'Address' => 'Jl. Gatot Soebroto No. 70, Toba Samosir, JA 83706', 'CreditCardNumber' => 1987],
+            ['NIKID' => '101', 'Name' => 'Ale', 'Email' => 'aleale@gmail.com', 'Phone' => '08123456789', 'Address' => 'Suite 839 Jl. Hayamwuruk No. 89, Berau, KU 39222', 'CreditCardNumber' => '1234'],
+            ['NIKID' => '102', 'Name' => 'Leo', 'Email' => 'leoamalia@yahoo.co.id', 'Phone' => '08789012345', 'Address' => 'Jl. MH. Thamrin No. 24, Sumbawa, KB 22844', 'CreditCardNumber' => '5689'],
+            ['NIKID' => '103', 'Name' => 'Lea', 'Email' => 'leavilia.jet@gmail.com', 'Phone' => '08134567890', 'Address' => 'Jl. Gajahmada No. 50, Jambi, SG 40689', 'CreditCardNumber' => '1357'],
+            ['NIKID' => '104', 'Name' => 'Satoru', 'Email' => 'satorusatria@gmail.com', 'Phone' => '08778901234', 'Address' => 'Jl. Hayamwuruk No. 30, Bitung, SL 21490', 'CreditCardNumber' => '2468'],
+            ['NIKID' => '105', 'Name' => 'Suguru', 'Email' => 'suguruarianto@student.telkomuniversity.ac.id', 'Phone' => '08156789012', 'Address' => 'Jl. Gatot Soebroto No. 70, Toba Samosir, JA 83706', 'CreditCardNumber' => '1987'],
         ]);
 
         Reservation::insert([
-            ['ReservationID' => 111, 'NIKID' => 101, 'RoomID' => 100, 'CheckInDate' => '2024-10-27', 'CheckOutDate' => '2024-10-28', 'TotalAmount' => 1000000, 'idPenyewaanMobil' => '001'],
-            ['ReservationID' => 222, 'NIKID' => 102, 'RoomID' => 101, 'CheckInDate' => '2024-10-31', 'CheckOutDate' => '2024-11-01', 'TotalAmount' => 1000000, 'idPenyewaanMobil' => '002'],
-            ['ReservationID' => 333, 'NIKID' => 103, 'RoomID' => 200, 'CheckInDate' => '2024-11-01', 'CheckOutDate' => '2024-11-03', 'TotalAmount' => 4000000, 'idPenyewaanMobil' => '003'],
-            ['ReservationID' => 444, 'NIKID' => 104, 'RoomID' => 201, 'CheckInDate' => '2024-11-01', 'CheckOutDate' => '2024-11-02', 'TotalAmount' => 2000000, 'idPenyewaanMobil' => '004'],
-            ['ReservationID' => 555, 'NIKID' => 105, 'RoomID' => 300, 'CheckInDate' => '2024-11-02', 'CheckOutDate' => '2024-11-04', 'TotalAmount' => 6000000, 'idPenyewaanMobil' => '005'],
+            ['NIKID' => '101', 'RoomID' => 1, 'CheckInDate' => '2024-10-27', 'CheckOutDate' => '2024-10-28', 'TotalAmount' => 1000000, 'idPenyewaanMobil' => '001'],
+            ['NIKID' => '102', 'RoomID' => 2, 'CheckInDate' => '2024-10-31', 'CheckOutDate' => '2024-11-01', 'TotalAmount' => 1000000, 'idPenyewaanMobil' => '002'],
+            ['NIKID' => '103', 'RoomID' => 3, 'CheckInDate' => '2024-11-01', 'CheckOutDate' => '2024-11-03', 'TotalAmount' => 4000000, 'idPenyewaanMobil' => '003'],
+            ['NIKID' => '104', 'RoomID' => 4, 'CheckInDate' => '2024-11-01', 'CheckOutDate' => '2024-11-02', 'TotalAmount' => 2000000, 'idPenyewaanMobil' => '004'],
+            ['NIKID' => '105', 'RoomID' => 5, 'CheckInDate' => '2024-11-02', 'CheckOutDate' => '2024-11-04', 'TotalAmount' => 6000000, 'idPenyewaanMobil' => '005'],
         ]);
 
         Review::insert([

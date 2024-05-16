@@ -9,11 +9,12 @@ class CreateGuestTable extends Migration
     public function up()
     {
         Schema::create('guest', function (Blueprint $table) {
-            $table->increments('GuestID');
-            $table->string('GuestFullName', 100);
-            $table->string('GuestAddress', 200);
-            $table->string('GuestPhone', 15);
-            $table->string('GuestEmail', 50);
+            $table->string('NIKID');
+            $table->string('Name');
+            $table->string('Email', 200);
+            $table->string('Phone', 15);
+            $table->string('Address', 50);
+            $table->string('CreditCardNumber');
             $table->timestamps();
         });
     }
