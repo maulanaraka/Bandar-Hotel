@@ -8,7 +8,7 @@ class CreateGuestTable extends Migration
 {
     public function up()
     {
-        Schema::create('guest', function (Blueprint $table) {
+        Schema::create('guests', function (Blueprint $table) {
             $table->increments('NIKID');
             $table->string('Name');
             $table->string('Email', 200);
@@ -21,6 +21,6 @@ class CreateGuestTable extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('guest');
+        Schema::dropIfExists('guests');
     }
 }
