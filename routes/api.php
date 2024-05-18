@@ -21,10 +21,14 @@ Route::get('room', [APIRoomController::class, 'index']);
 
 Route::post('room', [APIRoomController::class, 'upload']);
 
-Route::get('room', [APIReservationController::class, 'index']);
+Route::get('reservation', [APIReservationController::class, 'index']);
 
-Route::post('room', [APIReservationController::class, 'upload']);
+Route::post('reservation', [APIReservationController::class, 'upload']);
 
-Route::get('room', [APIReviewController::class, 'index']);
+Route::get('review', [APIReviewController::class, 'index']);
 
-Route::post('room', [APIReviewController::class, 'upload']);
+Route::post('review', [APIReviewController::class, 'upload']);
+
+Route::get('billing', [APIReviewController::class, 'index']);
+
+Route::post('billing', [APIReviewController::class, 'upload']);
