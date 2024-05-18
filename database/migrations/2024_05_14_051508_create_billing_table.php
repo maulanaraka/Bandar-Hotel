@@ -13,15 +13,15 @@ class CreateBillingTable extends Migration
      */
     public function up()
     {
-        Schema::create('billing', function (Blueprint $table) {
+        Schema::create('billings', function (Blueprint $table) {
             $table->increments('BillID');
             $table->integer('ReservationID')->unsigned();
-            $table->integer('TotalAmount');
-            $table->string('PaymentStatus', 50);
+            $table->double('TotalAmount');
+            $table->string('PaymentStatus', 8);
             $table->integer('CreditCardNumber');
             $table->timestamps();
 
-            $table->foreign('ReservationID')->references('ReservationID')->on('reservation')->onDelete('restrict')->onUpdate('restrict');
+            $table->foreign('ReservationID')->references('ReservationID')->on('reservations')->onDelete('restrict')->onUpdate('restrict');
         });
     }
 

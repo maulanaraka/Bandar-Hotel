@@ -8,13 +8,16 @@ class CreateReviewTable extends Migration
 {
     public function up()
     {
-        Schema::create('review', function (Blueprint $table) {
+        Schema::create('reviews', function (Blueprint $table) {
             $table->increments('ReviewID');
-            $table->integer('GuestID')->unsigned();
-            $table->text('Review');
+            $table->integer('ReservationID')->unsigned();
+            $table->integer('Rating');
+            $table->text('Comment');
+            $table->date('InputDate');
+            $table->string('TravelType');
             $table->timestamps();
 
-            $table->foreign('GuestID')->references('GuestID')->on('guest')->onDelete('restrict')->onUpdate('restrict');
+            $table->foreign('ReservationID')->references('ReservationID')->on('reservations')->onDelete('restrict')->onUpdate('restrict');
         });
     }
 
