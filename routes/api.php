@@ -1,7 +1,9 @@
 <?php
 
-use App\Http\Controllers\GuestController;
+use App\Http\Controllers\APIGuestController;
 use App\Http\Controllers\APIRoomController;
+use App\Http\Controllers\APIReservationController;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,8 +16,10 @@ Route::get('guest', [APIGuestController::class, 'index']);
 
 Route::post('guest', [APIGuestController::class, 'upload']);
 
-Route::post('guest', [GuestController::class, 'upload']);
-
 Route::get('room', [APIRoomController::class, 'index']);
 
 Route::post('room', [APIRoomController::class, 'upload']);
+
+Route::get('room', [APIReservationController::class, 'index']);
+
+Route::post('room', [APIReservationController::class, 'upload']);
