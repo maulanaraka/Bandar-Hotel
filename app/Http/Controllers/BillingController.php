@@ -45,4 +45,7 @@ class BillingController extends Controller
         $billing->delete();
         return redirect()->route('billings.index');
     }
+
+    // json api
+    
 }
