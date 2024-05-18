@@ -10,7 +10,9 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
-Route::get('guest', [GuestController::class, 'index']);
+Route::get('guest', [APIGuestController::class, 'index']);
+
+Route::post('guest', [APIGuestController::class, 'upload']);
 
 Route::post('guest', [GuestController::class, 'upload']);
 
