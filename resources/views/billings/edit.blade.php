@@ -52,7 +52,7 @@
     form button:hover {
         background-color: #0056b3;
     }
-</style>
+</style>   
 <div class="container">
     <h1>Edit Billing</h1>
     <form method="POST" action="/billings/{{ $billing->BillID }}">
