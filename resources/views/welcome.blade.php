@@ -77,7 +77,7 @@
         <h3><a href="guests"><img src="img/guest.jpg" alt="Guests"><p>Guests</p></a></h3>
         <h3><a href="reservations"><img src="img/reservations.jpg" alt="Reservations"><p>Reservations</p></a></h3>
         <h3><a href="reviews"><img src="img/review.jpg" alt="Reviews"><p>Reviews</p></a></h3>
-        <h3><a href="rooms/hotel.php"><img src="img/receipt.jpg" alt="Rooms"><p>Rooms</p></a></h3>
+        <h3><a href="rooms/hotel.php"><img src="img/hotel.jpg" alt="Rooms"><p>Rooms</p></a></h3>
     </div>
 </body>
 </html>
