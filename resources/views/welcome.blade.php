@@ -77,7 +77,7 @@
         <h3><a href="guests"><img src="https://online.jwu.edu/wp-content/uploads/2023/06/guest20loyalty-min.jpg" alt="Guests"><p>Guests</p></a></h3>
         <h3><a href="reservations"><img src="https://media.licdn.com/dms/image/C5612AQGPgWwQxrj1Jg/article-cover_image-shrink_423_752/0/1647506988774?e=1723075200&v=beta&t=6__Y8Pk6EbDpsjpyR23KgleXEwCkh3NYgEgi3FKsTY4" alt="Reservations"><p>Reservations</p></a></h3>
         <h3><a href="reviews"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfcfXb32JFLU6lD_d9n5ry3nTDHN_pn2LoZg&s" alt="Reviews"><p>Reviews</p></a></h3>
-        <h3><a href="rooms/hotel.php"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD5TlRJrGjUVT_BqlfSJgCVdBUlLjN-cvrKQ&s" alt="Rooms"><p>Rooms</p></a></h3>
+        <h3><a href="rooms"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD5TlRJrGjUVT_BqlfSJgCVdBUlLjN-cvrKQ&s" alt="Rooms"><p>Rooms</p></a></h3>
     </div>
 </body>
 </html>
