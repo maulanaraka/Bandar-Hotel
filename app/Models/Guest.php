@@ -9,5 +9,8 @@ class Guest extends Model
     use HasFactory;
 
     protected $fillable = ['NIKID', 'Name', 'Email', 'Phone', 'Address', 'CreditCardNumber'];
+
+    public $primaryKey = 'NIKID';
+    public $incrementing = false;
+    protected $keyType = 'string';
 }
-?>
