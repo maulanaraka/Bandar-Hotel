@@ -125,8 +125,8 @@
                     <td>{{ $guest->Address }}</td>
                     <td>{{ $guest->CreditCardNumber }}</td>
                     <td>
-                        <a href="{{ route('guests.edit', $guest) }}" class="btn btn-primary">Edit</a>
-                        <form method="POST" action="{{ route('guests.destroy', $guest) }}">
+                        <a href="{{ route('guests.edit', ['guest' => $guest->NIKID]) }}">Edit Guest</a>
+                        <form method="POST" action="{{ route('guests.destroy', ['guest' => $guest->NIKID]) }}">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger">Delete</button>

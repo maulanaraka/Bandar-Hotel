@@ -24,24 +24,28 @@ class GuestController extends Controller
         return redirect()->route('guests.index');
     }
 
-    public function show(Guest $guest)
+    public function show($NIKID)
     {
+        $guest = Guest::findOrFail($NIKID);
         return view('guests.show', compact('guest'));
     }
 
-    public function edit(Guest $guest)
+    public function edit($NIKID)
     {
+        $guest = Guest::findOrFail($NIKID);
         return view('guests.edit', compact('guest'));
     }
 
-    public function update(Request $request, Guest $guest)
+    public function update(Request $request, $NIKID)
     {
+        $guest = Guest::findOrFail($NIKID);
         $guest->update($request->all());
         return redirect()->route('guests.index');
     }
 
-    public function destroy(Guest $guest)
+    public function destroy($NIKID)
     {
+        $guest = Guest::findOrFail($NIKID);
         $guest->delete();
         return redirect()->route('guests.index');
     }
