@@ -12,10 +12,10 @@
             align-items: center;
             justify-content: center;
         }
-
         h1 {
-            color: #333;
-            margin-bottom: 20px;
+            text-align: center;
+            color: red;
+            margin-bottom: 30px;
         }
 
         .button-container {
@@ -43,31 +43,51 @@
             transform: scale(1.05);
         }
 
-        .room-list {
-            list-style: none;
-            padding: 0;
+        .table {
+            width: 100%;
+            border-collapse: collapse;
             margin-top: 20px;
         }
 
-        .room-list li {
-            margin-bottom: 10px;
+        .table th, .table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
         }
 
-        .room-list a {
-            display: block;
-            width: 100%;
-            text-align: center;
-            padding: 10px;
+        .table th {
             background-color: #007bff;
             color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: background-color 0.3s, transform 0.3s;
         }
 
-        .room-list a:hover {
-            background-color: #0056b3;
-            transform: scale(1.05);
+        .table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .table tr:hover {
+            background-color: #ddd;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .btn {
+                font-size: 14px;
+            }
+
+            li a {
+                font-size: 14px;
+            }
+
+            .table th, .table td {
+                padding: 8px;
+            }
         }
     </style>
 
@@ -75,11 +95,30 @@
     <div class="button-container">
         <a href="{{ route('rooms.create') }}">Create Room</a>
     </div>
-    <ul class="room-list">
-        @foreach($rooms as $room)
-            <li>
-                <a href="{{ route('rooms.show', $room->RoomID) }}">{{ $room->RoomNumber }}</a>
-            </li>
-        @endforeach
-    </ul>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>RoomID</th>
+                <th>RoomNumber</th>
+                <th>RoomType</th>
+                <th>Type</th>
+                <th>Rate</th>
+                <th>Availability</th>
+                <th>Insurance</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($rooms as $room)
+                <tr>
+                    <td>{{ $room->RoomID }}</td>
+                    <td>{{ $room->RoomNumber }}</td>
+                    <td>{{ $room->RoomType }}</td>
+                    <td>{{ $room->Type }}</td>
+                    <td>{{ $room->Rate }}</td>
+                    <td>{{ $room->Availability }}</td>
+                    <td>{{ $room->Insurance }}</td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
 @endsection
