@@ -33,6 +33,8 @@
             cursor: pointer;
             transition: background-color 0.3s;
             text-decoration: none;
+            display: inline-block;
+            margin-bottom: 20px;
         }
 
         .btn-primary:hover {
@@ -55,33 +57,27 @@
 
         .table {
             width: 100%;
-            margin-bottom: 20px;
             border-collapse: collapse;
+            margin-bottom: 20px;
         }
 
         .table th, .table td {
-            border: 1px solid #ccc;
-            padding: 10px;
+            border: 1px solid #ddd;
+            padding: 12px;
             text-align: left;
         }
 
         .table th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .table tr:nth-child(even) {
             background-color: #f2f2f2;
-            color: #333;
         }
 
-        .table td {
-            background-color: #fff;
-            color: #555;
-        }
-
-        .table td form {
-            display: inline-block;
-            margin: 0;
-        }
-
-        .table td form button {
-            margin-left: 5px;
+        .table tr:hover {
+            background-color: #ddd;
         }
 
         @media (max-width: 600px) {
@@ -89,20 +85,24 @@
                 padding: 15px;
             }
 
-            .table th, .table td {
-                padding: 8px;
+            h1 {
+                font-size: 24px;
             }
 
             .btn-primary, .btn-danger {
                 font-size: 14px;
                 padding: 8px 16px;
             }
+
+            .table th, .table td {
+                padding: 8px;
+            }
         }
     </style>
 
     <div class="container">
         <h1>Guests</h1>
-        <a href="{{ route('guests.create') }}" class="btn btn-primary">Add New Guest</a>
+        <a href="{{ route('guests.create') }}" class="btn-primary">Add New Guest</a>
         <table class="table">
             <thead>
                 <tr>
@@ -125,11 +125,11 @@
                     <td>{{ $guest->Address }}</td>
                     <td>{{ $guest->CreditCardNumber }}</td>
                     <td>
-                        <a href="{{ route('guests.edit', ['guest' => $guest->NIKID]) }}">Edit Guest</a>
-                        <form method="POST" action="{{ route('guests.destroy', ['guest' => $guest->NIKID]) }}">
+                        <a href="{{ route('guests.edit', ['guest' => $guest->NIKID]) }}" class="btn-primary">Edit Guest</a>
+                        <form method="POST" action="{{ route('guests.destroy', ['guest' => $guest->NIKID]) }}" style="display:inline-block;">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger">Delete</button>
+                            <button type="submit" class="btn-danger">Delete</button>
                         </form>
                     </td>
                 </tr>
