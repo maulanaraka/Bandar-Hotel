@@ -113,7 +113,7 @@
                     <td>{{ $room->RoomID }}</td>
                     <td>{{ $room->RoomNumber }}</td>
                     <td>{{ $room->RoomType }}</td>
-                    <td>{{ $room->Type }}</td>
+                    <td>{{ $room->RoomType }}</td>
                     <td>{{ $room->Rate }}</td>
                     <td>{{ $room->Availability }}</td>
                     <td>{{ $room->Insurance }}</td>
