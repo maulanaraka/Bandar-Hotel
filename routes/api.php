@@ -9,29 +9,26 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 
-Route::prefix('api')->group(function () {
-    Route::get('/user', function (Request $request) {
-        return $request->user();
-    })->middleware('auth:sanctum');
+Route::get('/user', function (Request $request) {
+    return $request->user();
+})->middleware('auth:sanctum');
 
-    Route::get('guest', [APIGuestController::class, 'index']);
+Route::get('guest', [APIGuestController::class, 'index']);
 
-    Route::post('guest', [APIGuestController::class, 'upload']);
+Route::post('guest', [APIGuestController::class, 'upload']);
 
-    Route::get('room', [APIRoomController::class, 'index']);
+Route::get('room', [APIRoomController::class, 'index']);
 
-    Route::post('room', [APIRoomController::class, 'upload']);
+Route::post('room', [APIRoomController::class, 'upload']);
 
-    Route::get('reservation', [APIReservationController::class, 'index']);
+Route::get('reservation', [APIReservationController::class, 'index']);
 
-    Route::post('reservation', [APIReservationController::class, 'upload']);
+Route::post('reservation', [APIReservationController::class, 'upload']);
 
-    Route::get('review', [APIReviewController::class, 'index']);
+Route::get('review', [APIReviewController::class, 'index']);
 
-    Route::post('review', [APIReviewController::class, 'upload']);
+Route::post('review', [APIReviewController::class, 'upload']);
 
-    Route::get('billing', [APIReviewController::class, 'index']);
+Route::get('billing', [APIReviewController::class, 'index']);
 
-    Route::post('billing', [APIReviewController::class, 'upload']);
-
-});
+Route::post('billing', [APIReviewController::class, 'upload']);
