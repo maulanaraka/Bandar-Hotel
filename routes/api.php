@@ -4,6 +4,7 @@ use App\Http\Controllers\APIGuestController;
 use App\Http\Controllers\APIRoomController;
 use App\Http\Controllers\APIReservationController;
 use App\Http\Controllers\APIReviewController;
+use App\Http\Controllers\APIGovernmentController; 
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -32,3 +33,9 @@ Route::post('review', [APIReviewController::class, 'upload']);
 Route::get('billing', [APIReviewController::class, 'index']);
 
 Route::post('billing', [APIReviewController::class, 'upload']);
+
+//Government API 
+Route::get('/penduduk', [APIGovernmentController::class, 'getAllPenduduk']);
+Route::get('/penduduk/{id_data}', [APIGovernmentController::class, 'getPenduduk']);
+Route::put('/penduduk/{id_data}', [APIGovernmentController::class, 'updatePenduduk']);
+Route::delete('/penduduk/{nik}', [APIGovernmentController::class, 'deletePenduduk']);
