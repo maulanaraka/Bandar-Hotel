@@ -44,6 +44,7 @@ use App\Http\Controllers\ReservationController;
     Route::get('guests/{guest}/edit', [GuestController::class, 'edit'])->name('guests.edit');
     Route::put('guests/{guest}', [GuestController::class, 'update'])->name('guests.update');
     Route::delete('guests/{guest}', [GuestController::class, 'destroy'])->name('guests.destroy');
+
      
     //Room Routes
     Route::get('rooms', [RoomController::class, 'index'])->name('rooms.index');

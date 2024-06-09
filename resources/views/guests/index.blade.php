@@ -116,17 +116,14 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($guests as $guest)
+                @foreach($citizens as $citizen)
                 <tr>
-                    <td>{{ $guest->NIKID }}</td>
-                    <td>{{ $guest->Name }}</td>
-                    <td>{{ $guest->Email }}</td>
-                    <td>{{ $guest->Phone }}</td>
-                    <td>{{ $guest->Address }}</td>
-                    <td>{{ $guest->CreditCardNumber }}</td>
+                    <td>{{ $citizen['nik'] }}</td>
+                    <td>{{ $citizen['nama']}}</td>
+                    <td>{{ $citizen['kota'] }}</td>
                     <td>
-                        <a href="{{ route('guests.edit', ['guest' => $guest->NIKID]) }}" class="btn-primary">Edit Guest</a>
-                        <form method="POST" action="{{ route('guests.destroy', ['guest' => $guest->NIKID]) }}" style="display:inline-block;">
+                        <a href="{{ route('guests.edit', $citizen['nik']) }}" class="btn-primary">Edit Guest</a>
+                        <form method="POST" action="{{ route('guests.destroy', $citizen['nik']) }}" style="display:inline-block;">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn-danger">Delete</button>

@@ -7,11 +7,11 @@ use Illuminate\Http\Request;
 use App\Models\Guest;
 use Illuminate\Support\Facades\Validator;
 
+// Web Logic
 class APIGuestController extends Controller
 {
     public function index()
     {
-
         $guest = Guest::all();
         $data = [
             
@@ -70,4 +70,5 @@ class APIGuestController extends Controller
 
         }
     }
+
 }

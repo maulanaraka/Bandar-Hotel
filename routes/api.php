@@ -33,9 +33,3 @@ Route::post('review', [APIReviewController::class, 'upload']);
 Route::get('billing', [APIReviewController::class, 'index']);
 
 Route::post('billing', [APIReviewController::class, 'upload']);
-
-//Government API 
-Route::get('/penduduk', [APIGovernmentController::class, 'getAllPenduduk']);
-Route::get('/penduduk/{id_data}', [APIGovernmentController::class, 'getPenduduk']);
-Route::put('/penduduk/{id_data}', [APIGovernmentController::class, 'updatePenduduk']);
-Route::delete('/penduduk/{nik}', [APIGovernmentController::class, 'deletePenduduk']);
